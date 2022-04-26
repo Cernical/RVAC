@@ -1,6 +1,8 @@
 # RVAC
 A simple CMD RISC-V Assembly Calculator
 
+# Changelog
+
 <h2>v0.1.0</h2>
 
 <b>Features</b>
