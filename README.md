@@ -1,5 +1,5 @@
 # RVAC
-<p>Una simple calculadora de RISC-V Assembly.</p>
+<h2>Una simple calculadora de RISC-V Assembly.</h2>
 
 # Changelog
 
