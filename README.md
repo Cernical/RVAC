@@ -3,6 +3,18 @@
 
 # Changelog
 
+<h2>v0.2.0</h2>
+
+<b>Features</b>
+
+- Se añade la funcionalidad de poder sumar o restar dos operandos en una única operación.
+
+<b>Bugs</b>
+
+- Ninguno
+
+<hr>
+
 <h2>v0.1.0</h2>
 
 <b>Features</b>
