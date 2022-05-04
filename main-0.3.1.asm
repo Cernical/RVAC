@@ -1,4 +1,4 @@
-# v-0.3.0
+# v-0.3.1
 
 # Leyenda--------------------------------------------------------------------------------
 # s1 (Sumando 1)
@@ -68,19 +68,17 @@ ___start:
 	
 	#Condiciones----------------------------------------------------------------------------
 	
-	li t1,1			#Añadir valores de comparativa
-	li t2,2			#Añadir valores de comparativa
-	li t3,3			#Añadir valores de comparativa
-	li t4,4			#Añadir valores de comparativa
+	li t1,1				#Añadir valores de comparativa
+	li t2,2				#Añadir valores de comparativa
+	li t3,3				#Añadir valores de comparativa
+	li t4,4				#Añadir valores de comparativa
 
-	beq t1, s2, Suma	#Condición y salto
-	beq t2, s2, Resta	#Condición y salto
-	beq t3, s2, Multi	#Condición y salto
-	beq t4, s2, Div		#Condición y salto
+	beq t1, s2, Suma		#Condición y salto
+	beq t2, s2, Resta		#Condición y salto
+	beq t3, s2, Multiplicacion	#Condición y salto
+	beq t4, s2, Division		#Condición y salto
 	
 	#---------------------------------------------------------------------------------------
-	
-	#j Apagar		#salto
 
 Suma:
 	li x1,1			#Almacenar estado (debug)
@@ -94,13 +92,15 @@ Resta:
 	sub s4,s1,s3
 	j Intermission
 	
-Multi:
+Multiplicacion:
+
 	li x1,3			#Almacenar estado (debug)
 	
 	mul s4,s3,s1
 	j Intermission
 	
-Div:
+Division:
+
 	li x1,3			#Almacenar estado (debug)
 	
 	div s4,s1,s3
