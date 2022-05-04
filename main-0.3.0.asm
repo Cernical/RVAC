@@ -1,4 +1,4 @@
-# v-0.2.0
+# v-0.3.0
 
 # Leyenda--------------------------------------------------------------------------------
 # s1 (Sumando 1)
@@ -6,6 +6,10 @@
 # s4 (Suma total)
 # s2 (Elección de operación)
 # x1 ((ra) Resultado tipo operación)
+# t1 Primera Opción (Suma)
+# t2 Segunda Opción (resta)
+# t3 Tercera Opción (Multiplicación)
+# t4 Cuarta Opción (División)
 #----------------------------------------------------------------------------------------
 
 .globl ___start
@@ -17,7 +21,7 @@ mensaje1:
 	.byte 0
 
 mensaje2:
-	.string "Que operación quieres realizar (Suma = (1)/Resta = (2)): "
+	.string "Que operación quieres realizar (Suma = (1) / Resta = (2) / Multiplicación = (3) / División = (4)): "
 	.byte 0
 	
 mensaje3:
@@ -66,9 +70,13 @@ ___start:
 	
 	li t1,1			#Añadir valores de comparativa
 	li t2,2			#Añadir valores de comparativa
+	li t3,3			#Añadir valores de comparativa
+	li t4,4			#Añadir valores de comparativa
 
 	beq t1, s2, Suma	#Condición y salto
 	beq t2, s2, Resta	#Condición y salto
+	beq t3, s2, Multi	#Condición y salto
+	beq t4, s2, Div		#Condición y salto
 	
 	#---------------------------------------------------------------------------------------
 	
@@ -84,6 +92,18 @@ Resta:
 	li x1,2			#Almacenar estado (debug)
 	
 	sub s4,s1,s3
+	j Intermission
+	
+Multi:
+	li x1,3			#Almacenar estado (debug)
+	
+	mul s4,s3,s1
+	j Intermission
+	
+Div:
+	li x1,3			#Almacenar estado (debug)
+	
+	div s4,s1,s3
 	j Intermission
 	
 Intermission:
