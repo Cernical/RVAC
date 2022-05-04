@@ -3,6 +3,18 @@
 
 # Changelog
 
+<h2>v0.3.1</h2>
+
+<b>Features</b>
+
+- Optimización del código.
+
+<b>Bugs</b>
+
+- Por encontrar.
+
+<hr>
+
 <h2>v0.3.0</h2>
 
 <b>Features</b>
