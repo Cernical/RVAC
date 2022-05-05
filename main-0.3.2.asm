@@ -1,11 +1,11 @@
-# v-0.3.1
+# v-0.3.2
 
 # Leyenda--------------------------------------------------------------------------------
 # s1 (Sumando 1)
 # s3 (Sumando 2)
 # s4 (Suma total)
 # s2 (Elección de operación)
-# x1 ((ra) Resultado tipo operación)
+# t5 ((ra) Resultado tipo operación)
 # t1 Primera Opción (Suma)
 # t2 Segunda Opción (resta)
 # t3 Tercera Opción (Multiplicación)
@@ -81,27 +81,27 @@ ___start:
 	#---------------------------------------------------------------------------------------
 
 Suma:
-	li x1,1			#Almacenar estado (debug)
+	li t5,1			#Almacenar estado (debug)
 	
 	add s4,s3,s1
 	j Intermission
 	
 Resta:
-	li x1,2			#Almacenar estado (debug)
+	li t5,2			#Almacenar estado (debug)
 	
 	sub s4,s1,s3
 	j Intermission
 	
 Multiplicacion:
 
-	li x1,3			#Almacenar estado (debug)
+	li t5,3			#Almacenar estado (debug)
 	
 	mul s4,s3,s1
 	j Intermission
 	
 Division:
 
-	li x1,3			#Almacenar estado (debug)
+	li t5,4			#Almacenar estado (debug)
 	
 	div s4,s1,s3
 	j Intermission
